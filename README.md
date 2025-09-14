@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # ProductFrontend
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
@@ -61,3 +62,6 @@ For more information on using the Angular CLI, including detailed command refere
 =======
 # Pagina_Angular
 >>>>>>> a6ddc3cc184caef79048e41c99bd97ea07663b1d
+=======
+# SpringBoot
+>>>>>>> 1c25553f608dfc52dc22edce75fad85cd8d7b572
