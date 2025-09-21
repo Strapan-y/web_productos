@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Producto } from './producto';
-import { ProductoService } from './producto.service';
+import { Producto } from '../app/Model/producto';
+import { ProductoService } from '../app/Services/producto.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-producto-form',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './producto-form.component.html',
-  styleUrls: ['./producto-form.component.css']
+  templateUrl: '../app/components/product-form/producto-form.component.html',
+  styleUrls: ['../app/components/product-form/producto-form.component.css']
 })
 export class ProductoFormComponent implements OnInit {
 onReset() {
