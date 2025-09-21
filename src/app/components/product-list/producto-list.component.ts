@@ -15,7 +15,16 @@ import { RouterLink } from '@angular/router';
 export class ProductoListComponent implements OnInit {
   productos: Producto[] = [];
 
-  constructor(private productoService: ProductoService) {}
+  // fallback de ejemplo
+  productosDefault: Producto[] = [
+    { id: 1, nombre: 'Producto demo 1', precio: 19.99, imagenUrl: 'https://i.pinimg.com/1200x/99/73/97/9973979e75eab4c8a0518e919c31d868.jpg' },
+    { id: 2, nombre: 'Producto demo 2', precio: 29.99, imagenUrl: 'https://i.pinimg.com/1200x/99/73/97/9973979e75eab4c8a0518e919c31d868.jpg' },
+    { id: 3, nombre: 'Producto demo 3', precio: 39.99, imagenUrl: 'https://i.pinimg.com/1200x/99/73/97/9973979e75eab4c8a0518e919c31d868.jpg' },
+    { id: 4, nombre: 'Producto demo 4', precio: 49.99, imagenUrl: 'https://i.pinimg.com/1200x/99/73/97/9973979e75eab4c8a0518e919c31d868.jpg' }
+
+  ];
+
+  constructor(private productoService: ProductoService) { }
 
   ngOnInit(): void {
     this.productoService.getProductos().subscribe({
@@ -24,8 +33,11 @@ export class ProductoListComponent implements OnInit {
       },
       error: (error) => {
         console.error("Ocurrió un error al hacer la peticion al backend: ", error);
-        alert("Error al consultar los productos");
+        this.productos = this.productosDefault; // fallback
+
       }
     });
   }
 }
+
+

@@ -13,3 +13,6 @@ export class ProductoCardComponent {
   // Con @Input, este componente recibe un objeto 'producto' del componente padre
   @Input() producto!: Producto;
 }
+
+
+
