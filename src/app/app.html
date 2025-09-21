@@ -1,5 +1,24 @@
+<div class="container">
+  <i class="fa fa-shopping-cart"></i>
 
-<h1>Hello {{title}}</h1>
-<button (click)="changeTitle()">Change Title</button>
+  <i
+    class="fa"
+    [ngClass]="isDarkMode() ? 'fa-sun' : 'fa-moon'"
+    (click)="toggleTheme()">
+  </i>
 
-<app-producto-form></app-producto-form>
+  <i class="fa fa-user"></i>
+</div>
+
+<main>
+  <div class="welcome">
+    <h1>Bienvenid@s</h1>
+    <p>
+      Aquí encontrarás ebooks, guías y recursos digitales diseñados para ayudarte a crear contenido
+      irresistible, potenciar tu marca en redes sociales, aprovechar la IA y mejorar tu relación con
+      el dinero.
+    </p>
+  </div>
+
+  <router-outlet></router-outlet>
+</main>

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Producto } from './producto';
-import { ProductoService } from './producto.service';
+import { Producto } from '../../Model/producto';
+import { ProductoService } from '../../Services/producto.service';
 import { Router } from '@angular/router';
 
 @Component({
